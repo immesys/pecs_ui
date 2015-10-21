@@ -121,6 +121,8 @@ void I2C1_Initialize(void) {
     // initialize the hardware
     // ACKEN disabled; STREN disabled; GCEN disabled; SMEN disabled; DISSLW enabled; I2CSIDL disabled; ACKDT Sends ACK; SCLREL Holds; RSEN disabled; IPMIEN disabled; A10M 7 Bit; PEN disabled; RCEN disabled; SEN disabled; I2CEN enabled; 
     I2C1CONL = 0x8000;
+   // I2C1CONH = 0b01100000;
+    I2C1CONH = 0;
     // P disabled; S disabled; BCL disabled; I2COV disabled; IWCOL disabled; 
     I2C1STAT = 0x0000;
     // I2CADD 55; 
@@ -134,11 +136,15 @@ void I2C1_Initialize(void) {
     I2C1_ReadPointerSet(NULL);
     I2C1_WritePointerSet(NULL);
 
+    _SI2C1IP = 5;
+    
     /* SI2C1 - I2C1 Slave Events */
     // clear the master interrupt flag
     IFS1bits.SI2C1IF = 0;
     // enable the master interrupt
     IEC1bits.SI2C1IE = 1;
+    
+    
 
 }
 
@@ -208,6 +214,10 @@ void __attribute__((interrupt, no_auto_psv)) _SI2C1Interrupt(void) {
 
                     I2C1_TransmitProcess();
                     i2c1_slave_state = S_SLAVE_TRANSMIT_MODE;
+                    //Try discard receive and clear overflow;
+                    dummy = I2C1_RECEIVE_REG;
+                    I2C1_RECEIVE_OVERFLOW_STATUS_BIT = 0;
+                    
                 }
 
             }
@@ -326,6 +336,9 @@ void __attribute__((interrupt, no_auto_psv)) _SI2C1Interrupt(void) {
             {
                 // no more data to be sent so we go to idle state
                 i2c1_slave_state = S_SLAVE_IDLE;
+                //Try discard receive and clear overflow;
+                dummy = I2C1_RECEIVE_REG;
+                I2C1_RECEIVE_OVERFLOW_STATUS_BIT = 0;
             }
             break;
 

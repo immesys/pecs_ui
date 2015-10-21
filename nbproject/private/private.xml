@@ -5,12 +5,17 @@
         <group>
             <file>file:/home/immesys/w/pecs/KnobbFW.X/mcc_generated_files/mcc.h</file>
             <file>file:/home/immesys/w/pecs/KnobbFW.X/mcc_generated_files/interrupt_manager.c</file>
+            <file>file:/home/immesys/w/pecs/KnobbFW.X/encoders.c</file>
+            <file>file:/home/immesys/w/pecs/KnobbFW.X/registers.c</file>
+            <file>file:/home/immesys/w/pecs/KnobbFW.X/main.c</file>
+            <file>file:/home/immesys/w/pecs/KnobbFW.X/mcc_generated_files/tmr1.c</file>
+            <file>file:/home/immesys/w/pecs/KnobbFW.X/ledctl.c</file>
             <file>file:/home/immesys/w/pecs/KnobbFW.X/mcc_generated_files/pin_manager.h</file>
             <file>file:/home/immesys/w/pecs/KnobbFW.X/mcc_generated_files/pin_manager.c</file>
             <file>file:/home/immesys/w/pecs/KnobbFW.X/mcc_generated_files/i2c1.h</file>
+            <file>file:/home/immesys/w/pecs/KnobbFW.X/ledctl.h</file>
             <file>file:/home/immesys/w/pecs/KnobbFW.X/mcc_generated_files/mcc.c</file>
             <file>file:/home/immesys/w/pecs/KnobbFW.X/mcc_generated_files/i2c1.c</file>
-            <file>file:/home/immesys/w/pecs/KnobbFW.X/main.c</file>
         </group>
     </open-files>
 </project-private>

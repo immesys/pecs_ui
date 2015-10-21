@@ -76,7 +76,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     </code>
 
  */
-#define SCL1_SetHigh()          _LATG2 = 1
+//#define SCL1_SetHigh()          _LATG2 = 1
 /**
   @Summary
     Sets the GPIO pin, RG2, low using LATG2.
@@ -100,7 +100,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     </code>
 
  */
-#define SCL1_SetLow()           _LATG2 = 0
+//#define SCL1_SetLow()           _LATG2 = 0
 /**
   @Summary
     Toggles the GPIO pin, RG2, using LATG2.
@@ -124,7 +124,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     </code>
 
  */
-#define SCL1_Toggle()           _LATG2 ^= 1
+//#define SCL1_Toggle()           _LATG2 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RG2.
@@ -150,7 +150,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     </code>
 
  */
-#define SCL1_GetValue()         _RG2
+//#define SCL1_GetValue()         _RG2
 /**
   @Summary
     Configures the GPIO pin, RG2, as an input.
@@ -174,7 +174,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     </code>
 
  */
-#define SCL1_SetDigitalInput()  _TRISG2 = 1
+//#define SCL1_SetDigitalInput()  _TRISG2 = 1
 /**
   @Summary
     Configures the GPIO pin, RG2, as an output.
@@ -198,7 +198,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     </code>
 
  */
-#define SCL1_SetDigitalOutput() _TRISG2 = 0
+//#define SCL1_SetDigitalOutput() _TRISG2 = 0
 /**
   @Summary
     Sets the GPIO pin, RG3, high using LATG3.
@@ -222,7 +222,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     </code>
 
  */
-#define SDA1_SetHigh()          _LATG3 = 1
+//#define SDA1_SetHigh()          _LATG3 = 1
 /**
   @Summary
     Sets the GPIO pin, RG3, low using LATG3.
@@ -246,7 +246,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     </code>
 
  */
-#define SDA1_SetLow()           _LATG3 = 0
+//#define SDA1_SetLow()           _LATG3 = 0
 /**
   @Summary
     Toggles the GPIO pin, RG3, using LATG3.
@@ -270,7 +270,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     </code>
 
  */
-#define SDA1_Toggle()           _LATG3 ^= 1
+//#define SDA1_Toggle()           _LATG3 ^= 1
 /**
   @Summary
     Reads the value of the GPIO pin, RG3.
@@ -296,7 +296,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     </code>
 
  */
-#define SDA1_GetValue()         _RG3
+//#define SDA1_GetValue()         _RG3
 /**
   @Summary
     Configures the GPIO pin, RG3, as an input.
@@ -320,7 +320,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     </code>
 
  */
-#define SDA1_SetDigitalInput()  _TRISG3 = 1
+//#define SDA1_SetDigitalInput()  _TRISG3 = 1
 /**
   @Summary
     Configures the GPIO pin, RG3, as an output.
@@ -344,7 +344,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     </code>
 
  */
-#define SDA1_SetDigitalOutput() _TRISG3 = 0
+//#define SDA1_SetDigitalOutput() _TRISG3 = 0
 
 /**
     Section: Function Prototypes

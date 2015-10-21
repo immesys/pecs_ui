@@ -1,5 +1,5 @@
 /**
-  @Generated MPLAB® Code Configurator Source File
+  @Generated MPLABï¿½ Code Configurator Source File
 
   @Company:
     Microchip Technology Inc.
@@ -8,12 +8,12 @@
     mcc.c
 
   @Summary:
-    This is the mcc.c file generated using MPLAB® Code Configurator
+    This is the mcc.c file generated using MPLABï¿½ Code Configurator
 
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB® Code Configurator - v2.25.2
+        Product Revision  :  MPLABï¿½ Code Configurator - v2.25.2
         Device            :  PIC24FJ128GA310
         Driver Version    :  1.02
     The generated drivers are tested against the following:
@@ -45,12 +45,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
  */
 
 // Configuration bits: selected in the GUI
-
-// PIC24FJ128GA410 Configuration Bit Settings
-
-// 'C' source line config statements
-
-#include <xc.h>
 
 // FSEC
 #pragma config BWRP = OFF               // Boot Segment Write Protect (Boot segment may be written)
@@ -107,7 +101,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #pragma config TMPRPIN = OFF            // Tamper Pin Enable bit (TMPRN pin function is disabled)
 #pragma config TMPRWIPE = OFF           // RAM Based Entryption Key Wipe Enable bit (Cryptographic Engine Key RAM is not erased onTMPR pin events)
 #pragma config ALTVREF = ALTVREFDIS     // Alternate VREF location Enable (VREF is on a default pin (VREF+ on RA10 and VREF- on RA9))
-
 
 #include "mcc.h"
 

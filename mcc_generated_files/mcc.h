@@ -1,5 +1,5 @@
 /**
-  @Generated MPLAB® Code Configurator Header File
+  @Generated MPLABï¿½ Code Configurator Header File
 
   @Company:
     Microchip Technology Inc.
@@ -8,12 +8,12 @@
     mcc.h
 
   @Summary:
-    This is the mcc.h file generated using MPLAB® Code Configurator
+    This is the mcc.h file generated using MPLABï¿½ Code Configurator
 
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB® Code Configurator - v2.25.2
+        Product Revision  :  MPLABï¿½ Code Configurator - v2.25.2
         Device            :  PIC24FJ128GA310
         Version           :  1.02
     The generated drivers are tested against the following:

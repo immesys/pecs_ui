@@ -9,12 +9,12 @@
 
   @Summary:
     This is the generated driver implementation file for setting up the
-    interrupts using MPLAB® Code Configurator
+    interrupts using MPLABï¿½ Code Configurator
 
   @Description:
-    This source file provides implementations for MPLAB® Code Configurator interrupts.
+    This source file provides implementations for MPLABï¿½ Code Configurator interrupts.
     Generation Information : 
-        Product Revision  :  MPLAB® Code Configurator - v2.25.2
+        Product Revision  :  MPLABï¿½ Code Configurator - v2.25.2
         Device            :  PIC24FJ128GA310
         Version           :  1.01
     The generated drivers are tested against the following:
