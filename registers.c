@@ -64,6 +64,7 @@ int8_t  *bottom_clicks          = (int8_t*) &register_backing[31];
 int8_t  *top_setting            = (int8_t*) &register_backing[34];
 int8_t  *bottom_setting         = (int8_t*) &register_backing[35];
 uint8_t *enable_autoset         = &register_backing[36];
+uint8_t *wdt_number             = &register_backing[37];
 uint8_t *firmware_version       = &register_backing[38];
 
 bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status) {
@@ -92,6 +93,7 @@ bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status) {
                 first = false;
                 if (data == 37)
                 {
+                    (*wdt_number) ++;
                     __builtin_clrwdt();
                 }
             }
@@ -114,7 +116,7 @@ bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status) {
 
 void register_tasks()
 {
-    *firmware_version = 0x11;
+    *firmware_version = 0x12;
     static int8_t last_top_clicks = 0;
     static int8_t last_bottom_clicks = 0;
     static uint8_t last_top_presses = 0;

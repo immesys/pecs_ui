@@ -64,23 +64,23 @@ Program Memory  [Origin = 0x100, Length = 0x15680]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100                0xd6           0x141  (321)
-.text                        0x1d6              0x137e          0x1d3d  (7485)
-.dinit                      0x1554                0x3e            0x5d  (93)
-.text                       0x1592                0x66            0x99  (153)
+.text                        0x1d6              0x1386          0x1d49  (7497)
+.dinit                      0x155c                0x40            0x60  (96)
+.text                       0x159c                0x66            0x99  (153)
 
-                     Total program memory used (bytes):         0x1f74  (8052) 6%
+                     Total program memory used (bytes):         0x1f83  (8067) 6%
 
 
 Data Memory  [Origin = 0x800, Length = 0x4000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.ndata                       0x800                   0            0x20  (32)
-.nbss                        0x820                   0            0x18  (24)
-.ndata                       0x838                   0             0x2  (2)
-.bss                         0x83a                   0            0x28  (40)
+.ndata                       0x800                   0            0x22  (34)
+.nbss                        0x822                   0            0x18  (24)
+.ndata                       0x83a                   0             0x2  (2)
+.bss                         0x83c                   0            0x28  (40)
 
-                        Total data memory used (bytes):           0x62  (98) <1%
+                        Total data memory used (bytes):           0x64  (100) <1%
 
 
 Dynamic Memory Usage
@@ -88,9 +88,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x862                              0x3f9e  (16286)
+stack                        0x864                              0x3f9c  (16284)
 
-                        Maximum dynamic memory (bytes):         0x3f9e  (16286)
+                        Maximum dynamic memory (bytes):         0x3f9c  (16284)
 
 
 External Symbols in Data Memory (by address):
@@ -110,14 +110,15 @@ External Symbols in Data Memory (by address):
                     0x0818                  _top_setting
                     0x081a                  _bottom_setting
                     0x081c                  _enable_autoset
-                    0x081e                  _firmware_version
-                    0x0830                  _kas_inhibit_time
-                    0x0832                  _kbs_inhibit_time
-                    0x0834                  _kas_inhibited
-                    0x0835                  _kbs_inhibited
-                    0x0836                  _ka_state
-                    0x0837                  _kb_state
-                    0x083a                  _register_backing
+                    0x081e                  _wdt_number
+                    0x0820                  _firmware_version
+                    0x0832                  _kas_inhibit_time
+                    0x0834                  _kbs_inhibit_time
+                    0x0836                  _kas_inhibited
+                    0x0837                  _kbs_inhibited
+                    0x0838                  _ka_state
+                    0x0839                  _kb_state
+                    0x083c                  _register_backing
 
 External Symbols in Data Memory (by name):
 
@@ -128,14 +129,14 @@ External Symbols in Data Memory (by name):
                     0x0812                  _bottom_presses
                     0x081a                  _bottom_setting
                     0x081c                  _enable_autoset
-                    0x081e                  _firmware_version
-                    0x0836                  _ka_state
-                    0x0830                  _kas_inhibit_time
-                    0x0834                  _kas_inhibited
-                    0x0837                  _kb_state
-                    0x0832                  _kbs_inhibit_time
-                    0x0835                  _kbs_inhibited
-                    0x083a                  _register_backing
+                    0x0820                  _firmware_version
+                    0x0838                  _ka_state
+                    0x0832                  _kas_inhibit_time
+                    0x0836                  _kas_inhibited
+                    0x0839                  _kb_state
+                    0x0834                  _kbs_inhibit_time
+                    0x0837                  _kbs_inhibited
+                    0x083c                  _register_backing
                     0x0800                  _status_led_color
                     0x0802                  _status_led_mode
                     0x0814                  _top_clicks
@@ -144,6 +145,7 @@ External Symbols in Data Memory (by name):
                     0x0808                  _top_knob_color
                     0x0810                  _top_presses
                     0x0818                  _top_setting
+                    0x081e                  _wdt_number
 
 External Symbols in Program Memory (by address):
 
@@ -161,57 +163,57 @@ External Symbols in Program Memory (by address):
                   0x000c1c                  __CNInterrupt
                   0x000f80                  _encoders_tasks
                   0x000faa                  _I2C1_StatusCallback
-                  0x001010                  _register_tasks
-                  0x001258                  _I2C1_Initialize
-                  0x001286                  _DRV_I2C1_Initialize
-                  0x00128e                  __SI2C1Interrupt
-                  0x0013fa                  _I2C1_ReadPointerSet
-                  0x001406                  _DRV_I2C1_ReadPointerSet
-                  0x001412                  _I2C1_WritePointerSet
-                  0x00141e                  _DRV_I2C1_WritePointerSet
-                  0x00142a                  _I2C1_ReadPointerGet
-                  0x001432                  _DRV_I2C1_ReadPointerGet
-                  0x00143a                  _I2C1_WritePointerGet
-                  0x001442                  _DRV_I2C1_WritePointerGet
-                  0x00144a                  _I2C1_SlaveAddressMaskSet
-                  0x001456                  _DRV_I2C1_SlaveAddressMaskSet
-                  0x001462                  _I2C1_SlaveAddressSet
-                  0x00147e                  _DRV_I2C1_SlaveAddressSet
-                  0x00148a                  _I2C1_TransmitProcess
-                  0x0014a4                  _I2C1_ReceiveProcess
-                  0x0014bc                  _sleep
-                  0x0014dc                  _main
-                  0x001592                  _PIN_MANAGER_Initialize
-                  0x0015ce                  _SYSTEM_Initialize
-                  0x0015dc                  _OSCILLATOR_Initialize
-                  0x0015e8                  _INTERRUPT_Initialize
+                  0x001018                  _register_tasks
+                  0x001260                  _I2C1_Initialize
+                  0x00128e                  _DRV_I2C1_Initialize
+                  0x001296                  __SI2C1Interrupt
+                  0x001402                  _I2C1_ReadPointerSet
+                  0x00140e                  _DRV_I2C1_ReadPointerSet
+                  0x00141a                  _I2C1_WritePointerSet
+                  0x001426                  _DRV_I2C1_WritePointerSet
+                  0x001432                  _I2C1_ReadPointerGet
+                  0x00143a                  _DRV_I2C1_ReadPointerGet
+                  0x001442                  _I2C1_WritePointerGet
+                  0x00144a                  _DRV_I2C1_WritePointerGet
+                  0x001452                  _I2C1_SlaveAddressMaskSet
+                  0x00145e                  _DRV_I2C1_SlaveAddressMaskSet
+                  0x00146a                  _I2C1_SlaveAddressSet
+                  0x001486                  _DRV_I2C1_SlaveAddressSet
+                  0x001492                  _I2C1_TransmitProcess
+                  0x0014ac                  _I2C1_ReceiveProcess
+                  0x0014c4                  _sleep
+                  0x0014e4                  _main
+                  0x00159c                  _PIN_MANAGER_Initialize
+                  0x0015d8                  _SYSTEM_Initialize
+                  0x0015e6                  _OSCILLATOR_Initialize
+                  0x0015f2                  _INTERRUPT_Initialize
 
 External Symbols in Program Memory (by name):
 
-                  0x001286                  _DRV_I2C1_Initialize
-                  0x001432                  _DRV_I2C1_ReadPointerGet
-                  0x001406                  _DRV_I2C1_ReadPointerSet
-                  0x001456                  _DRV_I2C1_SlaveAddressMaskSet
-                  0x00147e                  _DRV_I2C1_SlaveAddressSet
-                  0x001442                  _DRV_I2C1_WritePointerGet
-                  0x00141e                  _DRV_I2C1_WritePointerSet
-                  0x001258                  _I2C1_Initialize
-                  0x00142a                  _I2C1_ReadPointerGet
-                  0x0013fa                  _I2C1_ReadPointerSet
-                  0x0014a4                  _I2C1_ReceiveProcess
-                  0x00144a                  _I2C1_SlaveAddressMaskSet
-                  0x001462                  _I2C1_SlaveAddressSet
+                  0x00128e                  _DRV_I2C1_Initialize
+                  0x00143a                  _DRV_I2C1_ReadPointerGet
+                  0x00140e                  _DRV_I2C1_ReadPointerSet
+                  0x00145e                  _DRV_I2C1_SlaveAddressMaskSet
+                  0x001486                  _DRV_I2C1_SlaveAddressSet
+                  0x00144a                  _DRV_I2C1_WritePointerGet
+                  0x001426                  _DRV_I2C1_WritePointerSet
+                  0x001260                  _I2C1_Initialize
+                  0x001432                  _I2C1_ReadPointerGet
+                  0x001402                  _I2C1_ReadPointerSet
+                  0x0014ac                  _I2C1_ReceiveProcess
+                  0x001452                  _I2C1_SlaveAddressMaskSet
+                  0x00146a                  _I2C1_SlaveAddressSet
                   0x000faa                  _I2C1_StatusCallback
-                  0x00148a                  _I2C1_TransmitProcess
-                  0x00143a                  _I2C1_WritePointerGet
-                  0x001412                  _I2C1_WritePointerSet
-                  0x0015e8                  _INTERRUPT_Initialize
-                  0x0015dc                  _OSCILLATOR_Initialize
-                  0x001592                  _PIN_MANAGER_Initialize
-                  0x0015ce                  _SYSTEM_Initialize
+                  0x001492                  _I2C1_TransmitProcess
+                  0x001442                  _I2C1_WritePointerGet
+                  0x00141a                  _I2C1_WritePointerSet
+                  0x0015f2                  _INTERRUPT_Initialize
+                  0x0015e6                  _OSCILLATOR_Initialize
+                  0x00159c                  _PIN_MANAGER_Initialize
+                  0x0015d8                  _SYSTEM_Initialize
                   0x000c1c                  __CNInterrupt
                   0x0001d2                  __DefaultInterrupt
-                  0x00128e                  __SI2C1Interrupt
+                  0x001296                  __SI2C1Interrupt
                   0x000138                  __data_init
                   0x000138                  __data_init_extended
                   0x00012c                  __psv_init
@@ -220,9 +222,9 @@ External Symbols in Program Memory (by name):
                   0x000f80                  _encoders_tasks
                   0x0001d6                  _led_ctl_init
                   0x000be6                  _ledctl_tasks
-                  0x0014dc                  _main
-                  0x001010                  _register_tasks
-                  0x0014bc                  _sleep
+                  0x0014e4                  _main
+                  0x001018                  _register_tasks
+                  0x0014c4                  _sleep
                   0x0007fa                  _sync_bottom_dial
                   0x000ba8                  _sync_status
                   0x000496                  _sync_top_dial
@@ -341,7 +343,7 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x8a98
+.debug_info       0x000000       0x8ab7
  *(.debug_info)
  .debug_info      0x000000       0x1081 build/default/production/mcc_generated_files/i2c1.o
  .debug_info      0x001081        0x33c build/default/production/mcc_generated_files/pin_manager.o
@@ -349,8 +351,8 @@ __FDEVOPT1
  .debug_info      0x00172a        0x340 build/default/production/mcc_generated_files/mcc.o
  .debug_info      0x001a6a        0x2ad build/default/production/main.o
  .debug_info      0x001d17       0x55c5 build/default/production/ledctl.o
- .debug_info      0x0072dc        0x551 build/default/production/registers.o
- .debug_info      0x00782d       0x126b build/default/production/encoders.o
+ .debug_info      0x0072dc        0x570 build/default/production/registers.o
+ .debug_info      0x00784c       0x126b build/default/production/encoders.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x772
@@ -364,7 +366,7 @@ __FDEVOPT1
  .debug_abbrev    0x000575         0xdc build/default/production/registers.o
  .debug_abbrev    0x000651        0x121 build/default/production/encoders.o
 
-.debug_line       0x000000       0x1cc9
+.debug_line       0x000000       0x1cd1
  *(.debug_line)
  .debug_line      0x000000        0x61a build/default/production/mcc_generated_files/i2c1.o
  .debug_line      0x00061a        0x14f build/default/production/mcc_generated_files/pin_manager.o
@@ -372,8 +374,8 @@ __FDEVOPT1
  .debug_line      0x000826         0xf1 build/default/production/mcc_generated_files/mcc.o
  .debug_line      0x000917        0x1e5 build/default/production/main.o
  .debug_line      0x000afc        0x8d1 build/default/production/ledctl.o
- .debug_line      0x0013cd        0x2a6 build/default/production/registers.o
- .debug_line      0x001673        0x656 build/default/production/encoders.o
+ .debug_line      0x0013cd        0x2ae build/default/production/registers.o
+ .debug_line      0x00167b        0x656 build/default/production/encoders.o
 
 .debug_frame      0x000000        0x2b0
  *(.debug_frame)
@@ -386,15 +388,15 @@ __FDEVOPT1
  .debug_frame     0x000238         0x34 build/default/production/registers.o
  .debug_frame     0x00026c         0x44 build/default/production/encoders.o
 
-.debug_str        0x000000        0x811
+.debug_str        0x000000        0x81c
  *(.debug_str)
  .debug_str       0x000000         0x50 build/default/production/mcc_generated_files/i2c1.o
  .debug_str       0x000050          0x9 build/default/production/mcc_generated_files/interrupt_manager.o
  .debug_str       0x000059          0xb build/default/production/mcc_generated_files/mcc.o
  .debug_str       0x000064         0x97 build/default/production/main.o
  .debug_str       0x0000fb        0x562 build/default/production/ledctl.o
- .debug_str       0x00065d         0xa3 build/default/production/registers.o
- .debug_str       0x000700        0x111 build/default/production/encoders.o
+ .debug_str       0x00065d         0xae build/default/production/registers.o
+ .debug_str       0x00070b        0x111 build/default/production/encoders.o
 
 .debug_loc
  *(.debug_loc)
@@ -403,7 +405,7 @@ __FDEVOPT1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x536
+                  0x000000        0x545
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000        0x1cb build/default/production/mcc_generated_files/i2c1.o
@@ -418,9 +420,9 @@ __FDEVOPT1
  .debug_pubnames
                   0x00028a         0x6b build/default/production/ledctl.o
  .debug_pubnames
-                  0x0002f5        0x191 build/default/production/registers.o
+                  0x0002f5        0x1a0 build/default/production/registers.o
  .debug_pubnames
-                  0x000486         0xb0 build/default/production/encoders.o
+                  0x000495         0xb0 build/default/production/encoders.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -469,7 +471,7 @@ __FDEVOPT1
                   0x00002e          0x4 LONG 0x1d2 DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000030          0x4 LONG 0x1d2 DEFINED (__DMA1Interrupt)?ABSOLUTE (__DMA1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000032          0x4 LONG 0x1d2 DEFINED (__NVMInterrupt)?ABSOLUTE (__NVMInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000034          0x4 LONG 0x128e DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000034          0x4 LONG 0x1296 DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000036          0x4 LONG 0x1d2 DEFINED (__MI2C1Interrupt)?ABSOLUTE (__MI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000038          0x4 LONG 0x1d2 DEFINED (__CompInterrupt)?ABSOLUTE (__CompInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00003a          0x4 LONG 0xc1c DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
@@ -3097,8 +3099,8 @@ __c30_signature
  __c30_signature
                   0x000a80          0x6 /opt/microchip/xc16/v1.25/bin/bin/../../lib/liblega-pic30-elf.a(data_init_extended.o)
 
-.ndata              0x0800         0x20
- .ndata             0x0800         0x20 build/default/production/registers.o
+.ndata              0x0800         0x22
+ .ndata             0x0800         0x22 build/default/production/registers.o
                     0x0800                  _status_led_color
                     0x0802                  _status_led_mode
                     0x0804                  _top_dial_colors
@@ -3114,25 +3116,26 @@ __c30_signature
                     0x0818                  _top_setting
                     0x081a                  _bottom_setting
                     0x081c                  _enable_autoset
-                    0x081e                  _firmware_version
+                    0x081e                  _wdt_number
+                    0x0820                  _firmware_version
 
-.nbss               0x0820         0x18
- .nbss              0x0820          0x8 build/default/production/mcc_generated_files/i2c1.o
- .nbss              0x0828          0x8 build/default/production/registers.o
- .nbss              0x0830          0x8 build/default/production/encoders.o
-                    0x0830                  _kas_inhibit_time
-                    0x0832                  _kbs_inhibit_time
-                    0x0834                  _kas_inhibited
-                    0x0835                  _kbs_inhibited
-                    0x0836                  _ka_state
-                    0x0837                  _kb_state
+.nbss               0x0822         0x18
+ .nbss              0x0822          0x8 build/default/production/mcc_generated_files/i2c1.o
+ .nbss              0x082a          0x8 build/default/production/registers.o
+ .nbss              0x0832          0x8 build/default/production/encoders.o
+                    0x0832                  _kas_inhibit_time
+                    0x0834                  _kbs_inhibit_time
+                    0x0836                  _kas_inhibited
+                    0x0837                  _kbs_inhibited
+                    0x0838                  _ka_state
+                    0x0839                  _kb_state
 
-.ndata              0x0838          0x2
- .ndata             0x0838          0x2 build/default/production/mcc_generated_files/i2c1.o
+.ndata              0x083a          0x2
+ .ndata             0x083a          0x2 build/default/production/mcc_generated_files/i2c1.o
 
-.bss                0x083a         0x28
- .bss               0x083a         0x28 build/default/production/registers.o
-                    0x083a                  _register_backing
+.bss                0x083c         0x28
+ .bss               0x083c         0x28 build/default/production/registers.o
+                    0x083c                  _register_backing
 
 .config_ALTVREF
                   0x0157b0          0x2
@@ -3168,7 +3171,7 @@ __c30_signature
  .config_AIVTDIS
                   0x015780          0x2 build/default/production/mcc_generated_files/mcc.o
 
-.text             0x0001d6       0x137e
+.text             0x0001d6       0x1386
  .text            0x0001d6        0xa1c build/default/production/ledctl.o
                   0x0001d6                  _led_ctl_init
                   0x000496                  _sync_top_dial
@@ -3179,39 +3182,39 @@ __c30_signature
                   0x000bf2                  _encoders_init
                   0x000c1c                  __CNInterrupt
                   0x000f80                  _encoders_tasks
- .text            0x000faa        0x2ae build/default/production/registers.o
+ .text            0x000faa        0x2b6 build/default/production/registers.o
                   0x000faa                  _I2C1_StatusCallback
-                  0x001010                  _register_tasks
- .text            0x001258        0x264 build/default/production/mcc_generated_files/i2c1.o
-                  0x001258                  _I2C1_Initialize
-                  0x001286                  _DRV_I2C1_Initialize
-                  0x00128e                  __SI2C1Interrupt
-                  0x0013fa                  _I2C1_ReadPointerSet
-                  0x001406                  _DRV_I2C1_ReadPointerSet
-                  0x001412                  _I2C1_WritePointerSet
-                  0x00141e                  _DRV_I2C1_WritePointerSet
-                  0x00142a                  _I2C1_ReadPointerGet
-                  0x001432                  _DRV_I2C1_ReadPointerGet
-                  0x00143a                  _I2C1_WritePointerGet
-                  0x001442                  _DRV_I2C1_WritePointerGet
-                  0x00144a                  _I2C1_SlaveAddressMaskSet
-                  0x001456                  _DRV_I2C1_SlaveAddressMaskSet
-                  0x001462                  _I2C1_SlaveAddressSet
-                  0x00147e                  _DRV_I2C1_SlaveAddressSet
-                  0x00148a                  _I2C1_TransmitProcess
-                  0x0014a4                  _I2C1_ReceiveProcess
- .text            0x0014bc         0x98 build/default/production/main.o
-                  0x0014bc                  _sleep
-                  0x0014dc                  _main
+                  0x001018                  _register_tasks
+ .text            0x001260        0x264 build/default/production/mcc_generated_files/i2c1.o
+                  0x001260                  _I2C1_Initialize
+                  0x00128e                  _DRV_I2C1_Initialize
+                  0x001296                  __SI2C1Interrupt
+                  0x001402                  _I2C1_ReadPointerSet
+                  0x00140e                  _DRV_I2C1_ReadPointerSet
+                  0x00141a                  _I2C1_WritePointerSet
+                  0x001426                  _DRV_I2C1_WritePointerSet
+                  0x001432                  _I2C1_ReadPointerGet
+                  0x00143a                  _DRV_I2C1_ReadPointerGet
+                  0x001442                  _I2C1_WritePointerGet
+                  0x00144a                  _DRV_I2C1_WritePointerGet
+                  0x001452                  _I2C1_SlaveAddressMaskSet
+                  0x00145e                  _DRV_I2C1_SlaveAddressMaskSet
+                  0x00146a                  _I2C1_SlaveAddressSet
+                  0x001486                  _DRV_I2C1_SlaveAddressSet
+                  0x001492                  _I2C1_TransmitProcess
+                  0x0014ac                  _I2C1_ReceiveProcess
+ .text            0x0014c4         0x98 build/default/production/main.o
+                  0x0014c4                  _sleep
+                  0x0014e4                  _main
 
-.dinit            0x001554         0x3e
- .dinit           0x001554         0x3e data_init
+.dinit            0x00155c         0x40
+ .dinit           0x00155c         0x40 data_init
 
-.text             0x001592         0x66
- .text            0x001592         0x3c build/default/production/mcc_generated_files/pin_manager.o
-                  0x001592                  _PIN_MANAGER_Initialize
- .text            0x0015ce         0x1a build/default/production/mcc_generated_files/mcc.o
-                  0x0015ce                  _SYSTEM_Initialize
-                  0x0015dc                  _OSCILLATOR_Initialize
- .text            0x0015e8         0x10 build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x0015e8                  _INTERRUPT_Initialize
+.text             0x00159c         0x66
+ .text            0x00159c         0x3c build/default/production/mcc_generated_files/pin_manager.o
+                  0x00159c                  _PIN_MANAGER_Initialize
+ .text            0x0015d8         0x1a build/default/production/mcc_generated_files/mcc.o
+                  0x0015d8                  _SYSTEM_Initialize
+                  0x0015e6                  _OSCILLATOR_Initialize
+ .text            0x0015f2         0x10 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x0015f2                  _INTERRUPT_Initialize
